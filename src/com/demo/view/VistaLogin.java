@@ -1,12 +1,14 @@
 package com.demo.view;
 
+import com.demo.model.conexionMySQL;
 import com.demo.controller.ControllerLogin;
+import java.sql.Connection;
 import javax.swing.JOptionPane;
 
 public class VistaLogin extends javax.swing.JFrame {
-
     ControllerLogin cLogin;
     
+ 
     /**
      * Creates new form VistaLogin
      */
