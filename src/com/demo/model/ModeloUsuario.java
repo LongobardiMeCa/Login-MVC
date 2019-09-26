@@ -5,14 +5,15 @@ import com.demo.model.entity.Usuario;
 public class ModeloUsuario extends Model {
 
     static public boolean logIn(Usuario user) {
-        boolean band = false;
+        boolean bandera = false;
+
         if (user.getEmail().compareTo("carloslongmel@gmail.com") == 0 && user.getClave().compareTo("987654321") == 0) {
-            band = true;
+            bandera = true;
         } else {
-            band = false;
+            bandera = false;
         }
 
-        return band;
+        return bandera;
     }
 
     static public String LogUp() {
