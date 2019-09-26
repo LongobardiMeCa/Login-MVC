@@ -6,7 +6,6 @@ public class ModeloUsuario extends Model {
 
     static public boolean logIn(Usuario user) {
         boolean band = false;
-
         if (user.getEmail().compareTo("carloslongmel@gmail.com") == 0 && user.getClave().compareTo("987654321") == 0) {
             band = true;
         } else {
