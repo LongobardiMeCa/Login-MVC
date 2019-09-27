@@ -6,6 +6,8 @@ import java.sql.Connection;
 import javax.swing.JOptionPane;
 
 public class VistaLogin extends javax.swing.JFrame {
+
+    
     ControllerLogin cLogin;
     
  
@@ -123,12 +125,12 @@ public class VistaLogin extends javax.swing.JFrame {
         clave = this.jTxtClave.getText();
         
         boolean band;
-        
         band = this.cLogin.logIn(usuario, clave);
-        
+        System.out.println("f"+band);
         if(band){
             //login Correcto
             JOptionPane.showMessageDialog(this, "Login Valida");
+            
         }else{
             //login incorrecto
             JOptionPane.showMessageDialog(this, "Login Invalido");
@@ -137,6 +139,10 @@ public class VistaLogin extends javax.swing.JFrame {
 
     private void jBtnLogupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLogupActionPerformed
         // TODO add your handling code here:
+        VistaRegistro most= new VistaRegistro();
+        most.setVisible(true);
+        most.setLocationRelativeTo(null);
+    
     }//GEN-LAST:event_jBtnLogupActionPerformed
 
     private void jBtnRecuperarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRecuperarActionPerformed
@@ -173,7 +179,11 @@ public class VistaLogin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VistaLogin().setVisible(true);
+                VistaLogin mu = new VistaLogin();
+                mu.setVisible(true);
+                mu.setLocationRelativeTo(null);
+//                new VistaLogin().setVisible(true);
+//                new VistaLogin().setLocationRelativeTo(null);
             }
         });
     }

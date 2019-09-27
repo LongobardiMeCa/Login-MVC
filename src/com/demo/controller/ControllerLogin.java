@@ -18,16 +18,17 @@ public class ControllerLogin extends Controller {
     
     }
     
-    public boolean logIn(String usuario, String clave){
-        boolean band = false;
-        Usuario user = new Usuario(usuario, clave);
+    public boolean logIn(String email, String clave){
+        boolean band;
+        Usuario user= new Usuario(email, clave);
         band = ModeloUsuario.logIn(user);
         return band;
     }
-    
-    
-    public long logUp(){
-        long status = 0;
+
+    public boolean logUp(String nom, String apePater, String apeMater,String email, String clave){
+        boolean status;
+        Usuario envio = new Usuario(nom,apePater,apeMater,email,clave);
+        status=ModeloUsuario.LogUp(envio);
         return status;
     }
     
