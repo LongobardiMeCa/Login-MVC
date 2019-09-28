@@ -32,9 +32,11 @@ public class ControllerLogin extends Controller {
         return status;
     }
     
-    public long RecuperarClave(){
-        long status = 0;
-        return status;
+    public String RecuperarClave(String email){
+        String clave="";
+        Usuario recu = new Usuario(email);
+        clave=""+ModeloUsuario.LogRecu(recu);
+        return clave;
     }
     
 }

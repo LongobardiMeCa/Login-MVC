@@ -33,6 +33,9 @@ public class Usuario {
         this.email=email;
         this.clave=clave;
     }
+    public Usuario (String email){
+        this.email=email;
+    }
 
     public long getId() {
         return id;
